@@ -1,5 +1,6 @@
 models:
   - name: dim_listings_cleansed
+    description: cleansed table which contains airbnb listings.
     data_tests:
       - minimum_row_count:
           arguments:
@@ -7,6 +8,7 @@ models:
           
     columns: 
       - name: listing_id
+        description: primary key for the listings
         data_tests:
           - not_null
           - unique
@@ -31,6 +33,7 @@ models:
                         'Hotel room']
   
       - name: minimum_nights
+        description: '{{ doc("dim_listing_cleansed__minimum_nights")}}'
         data_tests: 
           - positive_values  
   
