@@ -58,3 +58,6 @@ models:
 data_tests: 
   +store_failures: true
   +schema: test_failures
+
+vars:
+  my_name: dbt_lvs  
